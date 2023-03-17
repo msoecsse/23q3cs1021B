@@ -1,6 +1,10 @@
 package week1;
 
-public class Circle implements Shape{
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Circle implements Shape {
 
     private String color;
     private double centerX;

@@ -7,6 +7,7 @@ public class ShapeDriver {
     public static void main(String[] args) {
 
         Circle circ1 = new Circle("purple", 5, 0,0);
+
         Rectangle rect = new Rectangle("red", 5,8,0,0);
 
         System.out.println("The area of our circle is: " + circ1.area());
