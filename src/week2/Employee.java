@@ -9,8 +9,14 @@ public class Employee extends Person {
         this.ID = ID;
     }
 
+//    public Employee(){
+//        this("John Doe",(int)(Math.random()*10_000)+1);
+//    }
+
+    @Override
     public void display(){
-        System.out.println(super.getName() + " has employee number " + this.ID);
+//        super.display();
+        System.out.println(super.name + " has employee number " + this.ID);
     }
 
 }
