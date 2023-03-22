@@ -1,6 +1,6 @@
 package week2;
 
-public abstract class Person {
+public class Person {
 
     protected final String name;
 
