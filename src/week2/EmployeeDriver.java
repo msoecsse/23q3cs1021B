@@ -7,12 +7,18 @@ public class EmployeeDriver {
         Employee bob = new Employee("Bob", 27);
         Person nash = new Person("Nash");
 
-        bob.display();
+        Object o = bob;
+        Employee bobTheBuilder = (Employee)o;
 
-        nash.display();
+        System.out.println( o instanceof Employee );
 
-        Person bobAtHome = bob;
-        bobAtHome.display();
+
+//        bob.display();
+//
+//        nash.display();
+//
+//        Person bobAtHome = bob;
+//        bobAtHome.display();
 
 
 

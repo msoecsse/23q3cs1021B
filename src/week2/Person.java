@@ -19,7 +19,7 @@ public class Person {
     public void display(){
         System.out.println(this.getName());
     }
-
+    
 //    public abstract void boastAboutJob();
 
 }

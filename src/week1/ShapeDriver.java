@@ -26,6 +26,10 @@ public class ShapeDriver {
             System.out.println(shape.getString());
         }
 
+
+        Object o = rect;
+        Circle circ = (Circle)o;
+
     }
 
 

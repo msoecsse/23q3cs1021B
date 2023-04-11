@@ -19,4 +19,22 @@ public class Employee extends Person {
         System.out.println(super.name + " has employee number " + this.ID);
     }
 
+    @Override
+    public boolean equals(Object o){
+
+        if(o==null){
+            return false;
+        }
+
+        if(!(o instanceof Employee)){
+            return false;
+        }
+
+        if(o==this){
+            return true;
+        }
+        
+        return ID == ((Employee)o).ID;
+    }
+
 }
