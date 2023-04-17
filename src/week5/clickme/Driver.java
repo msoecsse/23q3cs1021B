@@ -7,26 +7,56 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
+
+
 public class Driver extends Application {
 
     public void start(Stage primaryStage){
 
         Button button = new Button("Click me!");
+        Label label = new Label("Hello there");
 
-        //Separate lass reference
+        //Separate class reference
         //ButtonHandler handler = new ButtonHandler();
 
         //Inner class reference
-        ButtonHandler2 handler = new ButtonHandler2();
+        //ButtonHandler2 handler = new ButtonHandler2();
 
         //registration with EventHandler reference variable
-        button.setOnAction(handler);
+        //button.setOnAction(handler);
+
+        //registration with Anonymous inner class
+//        button.setOnAction(new EventHandler<ActionEvent>(){
+//            public void handle(ActionEvent event) {
+//                Button button = (Button)event.getSource();
+//
+//                if(button.getFont().equals(Font.font("Comic Sans MS"))){
+//                    button.setFont(Font.font("Papyrus"));
+//                }else{
+//                    button.setFont(Font.font("Comic Sans MS"));
+//                }
+//
+//            }
+//        });
+
+        //registration with lambda functions
+//        button.setOnAction(e -> {
+//            button.setTranslateX(Math.random() * 150);
+//            button.setTranslateY(Math.random() * 150);
+//        });
+
+        //registration with lamda function and a separate method
+        //button.setOnAction(e -> foobar(e));
+
+        //method reference
+        button.setOnMouseMoved(this::foobar);
 
 
         button.setAlignment(Pos.CENTER);
@@ -50,14 +80,9 @@ public class Driver extends Application {
         launch(args);
     }
 
-    public void fubar(ActionEvent event) {
+    public void foobar(MouseEvent event) {
         Button button = (Button)event.getSource();
-
-        if(button.getFont().equals(Font.font("Comic Sans MS"))){
-            button.setFont(Font.font("Papyrus"));
-        }else{
-            button.setFont(Font.font("Comic Sans MS"));
-        }
+        button.setRotate(30 + button.getRotate());
 
     }
 
