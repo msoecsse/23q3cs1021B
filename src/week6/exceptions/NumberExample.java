@@ -12,17 +12,13 @@ public class NumberExample {
         System.out.println("Hey you! Enter a number!");
         boolean flag = false;
 
-        notNegative(a);
-
         while(!flag){
             try{
                 a = Double.parseDouble(in.nextLine());
-
+                notNegative(a);
                 flag = true;
             }catch(NumberFormatException e) {
                 System.out.println(e.getLocalizedMessage());
-            }finally{
-
             }
         }
 
