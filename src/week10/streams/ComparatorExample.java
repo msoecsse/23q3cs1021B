@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ComparatorExample {
 
@@ -13,8 +14,9 @@ public class ComparatorExample {
 
         List<String> newList = list.stream().filter(s -> s.length() == 3).filter(s -> s.charAt(0) == 'f').toList();
 
-        System.out.println(newList);
+        //newList.stream().forEach
 
+        System.out.println(newList);
 
     }
 
